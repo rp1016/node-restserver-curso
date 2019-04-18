@@ -15,3 +15,20 @@ let user = 'strider';
 let password = 'mTnNGqWOvsGW6UDs';
 let urlDB = process.env.NODE_ENV === 'dev' ? 'mongodb://localhost:27017/cafe' : process.env.MONGO_URI;
 process.env.URLDB = urlDB;
+
+
+// =========================
+// Vencimiento del Token
+// =========================
+// 60 segundos
+// 60 minutos
+// 24 horas
+// 30 dias
+
+process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
+
+// =========================
+// SEED de autenticación
+// =========================
+
+process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
